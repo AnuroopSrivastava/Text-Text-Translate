@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900@display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  flex-direction: column;
+  background: #F0E1D8;
+}
+.container {
+  min-width: 700px;
+  width: 100%;
+  padding: 60px;
+  background: #c9ced1;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.wrapper {
+  border-radius: 25px;
+  border: 1px solid #847def;
+  background: #ebede1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a 3D box shadow */
+}
+.wrapper .text-input {
+  display: flex;
+  border-radius: 25px;
+  border-bottom: 1px solid #ccc;
+}
+.text-input .to-text {
+  border-radius: 0px;
+  border-radius: 5px;
+  border-left: 1px solid #ccc;
+}
+.text-input textarea {
+  height: 250px;
+  width: 400px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #fff;
+}
+.text-input textarea::placeholder {
+  color: #b7b6b6;
+}
+.controls,
+li,
+.icons,
+.icons i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls {
+  list-style: none;
+  padding: 18px 25px;
+}
+.controls .row .icons {
+  width: 40%;
+}
+.controls .row .icons i {
+  width: 60px;
+  color: #6f6c6c;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  justify-content: center;
+}
+.controls .row.from .icons {
+  padding-right: 15px;
+  border-right: 1px solid #ccc;
+}
+.controls .row.to .icons {
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+.controls .row select {
+  color: #333;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  padding-left: 5px;
+}
+.text-input textarea::-webkit-scrollbar {
+  width: 4px;
+}
+.controls .row select::-webkit-scrollbar {
+  width: 8px;
+}
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+  background: #fff;
+}
+.text-input textarea::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 15px;
+}
+.controls .row select::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 15px;
+  border-right: 2px solid #ffffff;
+}
+.controls .exchange {
+  color: #6f6c6c;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+.controls i:active {
+  transform: scale(0.5);
+}
+.container button {
+ position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  justify-content: center;
+  text-decoration: none;
+  letter-spacing: 2px;
+  width: 50%;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: none;
+  padding: 14px;
+  margin: 0px 210px;
+  margin-top: 30px;
+  background: #008b8b;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 6px, rgba(0, 0, 0, 0.5) 0px 3px 6px;
+  font-size: 17px;
+  border-radius: 50px;
+}
+/*.btn{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  justify-content: center;
+  text-decoration: none;
+  letter-spacing: 2px;
+  width: 50%;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: none;
+  padding: 14px;
+  margin: 0px 210px;
+  margin-top: 30px;
+  background: linear-gradient(90deg,#755bea,#ff72c0);
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.2) 0px 3px 6px;
+  font-size: 17px;
+  border-radius: 50px;
+}*/
+.btn-ripple{
+  overflow: hidden;
+}
+.ripple-effect{
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  pointer-events: none;
+  z-index: 5;
+  animation: animate 1s linear infinite;
+}
+@keyframes ripple {
+  0%{
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }100%{
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
